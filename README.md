@@ -104,6 +104,8 @@ delay(1000);
 }
 
 Connect the DHT11 sensor to Nodemcu. connect 
-
+![esp8266-node-mcu-pinout](https://user-images.githubusercontent.com/25893079/27771395-4cd6561e-5f6b-11e7-8651-6937b97fdd0f.png)
+Make sure the connections are correct and deploy the code .
+Finally the data is logged into ThingSpeak.
 ![screenshot 3](https://user-images.githubusercontent.com/25893079/27622997-f24d475a-5bf7-11e7-8faf-f68be842cc75.png)
 
