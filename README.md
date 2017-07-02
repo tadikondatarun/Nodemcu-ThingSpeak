@@ -16,14 +16,20 @@ After creating a channel go to the API key and note down the API code generated.
 ![screenshot 2](https://user-images.githubusercontent.com/25893079/27622987-e7e661b6-5bf7-11e7-81c7-0fca7d1541d1.png)
 Open the Arduino IDE and copy down the code.
 #include <dht.h> //  DHT.h library
+
 #include <ESP8266WiFi.h> // ESP8266WiFi.h library
 
+
 int pin=13;// connect the dht11 sensor to D7 pin on nodemcu
+
 dht DHT;
 
 const char* ssid     = "ssid";
+
 const char* password = "password";
+
 const char* host = "api.thingspeak.com";
+
 const char* writeAPIKey = "api key";
 
 
