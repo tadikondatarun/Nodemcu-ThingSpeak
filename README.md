@@ -34,48 +34,74 @@ const char* writeAPIKey = "api key";
 
 
 
-void setup() {
-  // Initialize sensor
- //dht.begin();
- // delay(1000);
+void setup()
+{
+ 
 
 //  Connect to WiFi network
+
   WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-  }
+
+while (WiFi.status() != WL_CONNECTED) {
+
+delay(500);
+
+}
+
 }
 
 void loop() {
-  DHT.read11(pin);
- int humidity=DHT.humidity;
- int temperature=DHT.temperature;
+
+DHT.read11(pin);
+
+int humidity=DHT.humidity;
+
+int temperature=DHT.temperature;
 
   if (isnan(humidity) || isnan(temperature)) {
-    return;
-  }
+
+return;
+
+}
 
 // make TCP connections
-  WiFiClient client;
-  const int httpPort = 80;
-  if (!client.connect(host, httpPort)) {
-    return;
-  }
+
+WiFiClient client;
+
+const int httpPort = 80;
+
+if (!client.connect(host, httpPort)) {
+
+return;
+
+}
 
   String url = "/update?key=";
-  url+=writeAPIKey;
-  url+="&field1=";
-  url+=String(temperature);
-  url+="&field2=";
-  url+=String(humidity);
-  url+="\r\n";
+
+url+=writeAPIKey;
+
+url+="&field1=";
+
+url+=String(temperature);
+
+url+="&field2=";
+
+url+=String(humidity);
+
+url+="\r\n";
   
   // Request to the server
-  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
-               "Host: " + host + "\r\n" + 
-               "Connection: close\r\n\r\n");
-    delay(1000);
+
+client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+
+"Host: " + host + "\r\n" + 
+
+"Connection: close\r\n\r\n");
+
+delay(1000);
+
 }
+
 Connect the DHT11 sensor to Nodemcu. connect 
 
 ![screenshot 3](https://user-images.githubusercontent.com/25893079/27622997-f24d475a-5bf7-11e7-8faf-f68be842cc75.png)
