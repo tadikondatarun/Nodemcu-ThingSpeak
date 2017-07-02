@@ -9,6 +9,7 @@ It based on ESP8266, integates GPIO, PWM, IIC, 1-Wire and ADC all in one board. 
 ThingSpeak is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in.
 ## Connecting Nodemcu to ThingSpeak
 https://thingspeak.com/
+
 Login into ThingSpeak and create a channel in it.
 ![screenshot 1](https://user-images.githubusercontent.com/25893079/27622964-d0a75af0-5bf7-11e7-89f2-af9f87bcad2c.png)
 After creating a channel go to the API key and note down the API code generated.
@@ -103,8 +104,9 @@ delay(1000);
 
 }
 
-Connect the DHT11 sensor to Nodemcu. connect 
+Connect the DHT11 sensor to Nodemcu.
 ![esp8266-node-mcu-pinout](https://user-images.githubusercontent.com/25893079/27771395-4cd6561e-5f6b-11e7-8651-6937b97fdd0f.png)
+
 Make sure the connections are correct and deploy the code .
 Finally the data is logged into ThingSpeak.
 ![screenshot 3](https://user-images.githubusercontent.com/25893079/27622997-f24d475a-5bf7-11e7-8faf-f68be842cc75.png)
