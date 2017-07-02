@@ -60,7 +60,8 @@ int humidity=DHT.humidity;
 
 int temperature=DHT.temperature;
 
-  if (isnan(humidity) || isnan(temperature)) {
+  if (isnan(humidity)   ||   isnan(temperature))
+  {
 
 return;
 
